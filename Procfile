@@ -1,1 +1,1 @@
-web: unicorn bookshop.wsgi
+web: gunicorn bookshop.wsgi
