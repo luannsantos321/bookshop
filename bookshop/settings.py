@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
-import django_heroku
 from pathlib import Path
+from app import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)w9h%lsnaptsv1dlm%ad=yyj7ukhdfo7@0gjj35qcp*nhz_5e!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://bookseach.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -121,9 +121,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+django_heroku.settings(locals())
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())

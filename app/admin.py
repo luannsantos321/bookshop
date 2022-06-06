@@ -8,4 +8,4 @@ class LivrosAdmin(admin.ModelAdmin):
     list_filter = ('id', 'titulo', 'autor', 'paginas', 'data_publicacao', 'criacao_dados')
 
 
-admin.site.register(Livros, LivrosAdmin)
+admin.site.register(Livros, LivrosAdmin)    
